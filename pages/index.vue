@@ -9,9 +9,7 @@
         <at-input v-model="password" type="password" placeholder="Password"></at-input>
         </section>
       <div class="links">
-        <nuxt-link to="/profile"> 
-        <at-button size="large"  >Login</at-button>
-        </nuxt-link>
+        <button v-on:click="onSignIn" class="btn btn-large btn-extended grey lighten-4 black-text">Log In</button>
         <nuxt-link to="/signup"> 
         <at-button size="large"  >Sign Up</at-button>
         </nuxt-link>
@@ -41,7 +39,7 @@ export default {
             const profile = user.getBasicProfile()
           this.$Message.success('Signed in successfully as ' + profile.getName())
       console.log('Name: ' + profile.getName());
-      
+      //      signInWithEmailAndPassword(Username,Password)
 }
 },
   mounted() {
